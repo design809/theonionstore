@@ -1,0 +1,47 @@
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.demo-banner {
+  background: linear-gradient(135deg, #fdf8fb 0%, #f7edf4 100%);
+  padding: 80px 24px;
+  text-align: center;
+  border-bottom: 1px solid #ebd9e5;
+}
+
+.demo-banner-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.demo-banner .badge {
+  display: inline-block;
+  background-color: #6db327;
+  color: #ffffff;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(109, 179, 39, 0.3);
+}
+
+.demo-banner h1 {
+  font-size: 40px;
+  font-weight: 800;
+  color: #4a0930;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.demo-banner p {
+  font-size: 18px;
+  color: #7e6073;
+}

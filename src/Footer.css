@@ -1,0 +1,608 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* =========================================
+   FOOTER WRAPPER
+   ========================================= */
+.greenbee-footer-wrapper {
+  width: 100%;
+  background-color: #ffffff;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #333333;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* 1. Top Decorative Grass & Torn Paper Transition */
+.greenbee-footer-grass-banner {
+  width: 100%;
+  height: 140px;
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.grass-banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* 2. Main Footer Body */
+.greenbee-footer-main {
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.greenbee-footer-container {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+/* =========================================
+   TOP BENEFITS / FEATURES ROW
+   ========================================= */
+.greenbee-features-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+  padding: 30px 0 45px 0;
+  border-bottom: 1px solid #edf1ee;
+}
+
+.greenbee-feature-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: transform 0.25s ease;
+}
+
+.greenbee-feature-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Sketched Green Circle Emblem */
+.greenbee-feature-icon-emblem {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.greenbee-sketch-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.greenbee-feature-card:hover .greenbee-sketch-ring {
+  transform: rotate(45deg);
+}
+
+.greenbee-feature-icon-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.greenbee-feature-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.greenbee-feature-title {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: #1a1a1a;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  margin: 0 0 6px 0;
+}
+
+.greenbee-feature-desc {
+  font-size: 12px;
+  line-height: 1.55;
+  color: #777777;
+  margin: 0;
+  max-width: 280px;
+}
+
+/* =========================================
+   MIDDLE 4-COLUMN FOOTER LINKS GRID
+   ========================================= */
+.greenbee-links-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  padding: 48px 0 54px 0;
+}
+
+.greenbee-footer-col-title {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: #1a1a1a;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
+  position: relative;
+}
+
+.greenbee-footer-links-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.greenbee-footer-links-list li a {
+  font-size: 13px;
+  color: #666666;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.greenbee-footer-links-list li a:hover {
+  color: #0a6637;
+  padding-left: 5px;
+}
+
+/* Contact Details Column */
+.greenbee-contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.greenbee-contact-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  color: #666666;
+  line-height: 1.45;
+}
+
+.greenbee-contact-list li .contact-icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #888888;
+}
+
+.greenbee-contact-list li a {
+  color: #666666;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.greenbee-contact-list li a:hover {
+  color: #0a6637;
+}
+
+/* =========================================
+   3. SUB-FOOTER (COPYRIGHT & PAYMENT ICONS)
+   ========================================= */
+.greenbee-subfooter-bar {
+  border-top: 1px solid #edf1ee;
+  padding: 24px 0;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.greenbee-subfooter-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.greenbee-copyright-text {
+  font-size: 12.5px;
+  color: #777777;
+  letter-spacing: 0.2px;
+}
+
+/* Payment Badges */
+.greenbee-payment-badges {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.payment-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background-color: #f7faf8;
+  border: 1px solid #e1ebe3;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.payment-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.badge-text {
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.payment-badge.amex {
+  color: #0077a6;
+}
+
+.payment-badge.visa-text,
+.payment-badge .visa-text {
+  color: #1a1f71;
+  font-style: italic;
+  font-weight: 900;
+}
+
+.payment-badge .paypal-text {
+  color: #003087;
+  font-weight: 800;
+}
+
+.payment-badge .paypal-text em {
+  color: #0079c1;
+  font-style: italic;
+}
+
+.payment-badge.dbs .dbs-text {
+  color: #d71e28;
+  font-weight: 900;
+}
+
+/* Floating Scroll To Top Button */
+.greenbee-scroll-top-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1.8px solid #0a6637;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 4px 14px rgba(10, 102, 55, 0.2);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.greenbee-scroll-top-btn:hover {
+  background-color: #0a6637;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(10, 102, 55, 0.35);
+}
+
+.greenbee-scroll-top-btn:hover svg {
+  stroke: #ffffff;
+}
+
+/* =========================================
+   4. EXACT MOBILE BOTTOM FOOTER TOOLBAR
+   ========================================= */
+.mobile-bottom-footer-bar {
+  display: none;
+}
+
+/* =========================================
+   RESPONSIVE FOOTER STYLES
+   ========================================= */
+@media (max-width: 1024px) {
+  .greenbee-features-row {
+    gap: 20px;
+  }
+
+  .greenbee-links-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px;
+  }
+}
+
+@media (max-width: 860px) {
+  /* Give space at the bottom for the fixed toolbar */
+  .greenbee-footer-wrapper {
+    padding-bottom: 58px;
+  }
+
+  /* Show Fixed Mobile Bottom Bar */
+  .mobile-bottom-footer-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 56px;
+    background-color: #ffffff;
+    border-top: 1px solid #e8e8e8;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.04);
+    padding: 2px 0 3px 0;
+  }
+
+  .mobile-bottom-nav-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 4px 0;
+    color: #333333;
+    transition: all 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .mobile-bottom-nav-item:active {
+    transform: scale(0.95);
+  }
+
+  .mobile-nav-icon-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+    color: #333333;
+    transition: color 0.2s ease;
+  }
+
+  .mobile-bottom-nav-item:hover .mobile-nav-icon-box,
+  .mobile-bottom-nav-item:hover .mobile-nav-label {
+    color: #74114e;
+  }
+
+  .mobile-cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -8px;
+    background-color: #108043;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 700;
+    min-width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    border: 1.5px solid #ffffff;
+    padding: 0 2px;
+  }
+
+  .mobile-nav-label {
+    font-size: 11px;
+    color: #888888;
+    margin-top: 2px;
+    font-weight: 400;
+    letter-spacing: 0.1px;
+    line-height: 1.1;
+    transition: color 0.2s ease;
+  }
+
+  /* Hide Desktop Floating Button on Mobile */
+  .greenbee-scroll-top-btn {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .greenbee-footer-grass-banner {
+    height: 100px;
+  }
+
+  .greenbee-features-row {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 24px 0 32px 0;
+  }
+
+  .greenbee-links-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 32px 0 40px 0;
+  }
+
+  .greenbee-subfooter-container {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+}
+
+/* =========================================
+   MOBILE BOTTOM SHEET MODALS
+   ========================================= */
+.mobile-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 10000;
+  display: flex;
+  align-items: flex-end;
+  animation: overlayFadeIn 0.25s ease;
+}
+
+@keyframes overlayFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.mobile-modal-sheet {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 20px 20px 0 0;
+  padding: 16px 20px 80px 20px;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.15);
+  animation: sheetSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+@keyframes sheetSlideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.mobile-sheet-handle {
+  width: 40px;
+  height: 4px;
+  background-color: #dddddd;
+  border-radius: 2px;
+  margin: 0 auto 14px auto;
+}
+
+.mobile-sheet-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+}
+
+.mobile-sheet-header h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.sheet-close-btn {
+  background: #f4f4f4;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  cursor: pointer;
+  color: #666;
+}
+
+.settings-options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.setting-option-group label {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.setting-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.setting-chip {
+  padding: 7px 14px;
+  border-radius: 20px;
+  border: 1px solid #dddddd;
+  background: #ffffff;
+  color: #444;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+}
+
+.setting-chip.active {
+  background-color: #74114e;
+  border-color: #74114e;
+  color: #ffffff;
+}
+
+.setting-links-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-top: 1px solid #eeeeee;
+  padding-top: 16px;
+  margin-top: 6px;
+}
+
+.setting-link-item {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #333333;
+  text-decoration: none;
+  padding: 6px 0;
+  display: block;
+}
+
+.setting-link-item:hover {
+  color: #74114e;
+}
+
+.sheet-info-box {
+  text-align: center;
+  padding: 15px 0;
+}
+
+.sheet-info-box p {
+  font-size: 13.5px;
+  color: #666666;
+  margin-bottom: 18px;
+}
+
+.sheet-primary-btn {
+  display: inline-block;
+  background-color: #74114e;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+

@@ -1,0 +1,264 @@
+/* ==========================================================================
+   THE ONION STORE - LIVE ORDER NOTIFICATION TOAST
+   ========================================================================== */
+
+.onion-toast-container {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 100000;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 420px;
+  width: calc(100vw - 32px);
+  pointer-events: none;
+}
+
+@media (max-width: 540px) {
+  .onion-toast-container {
+    top: 16px;
+    right: 16px;
+    left: 16px;
+    width: auto;
+  }
+}
+
+.onion-order-toast {
+  pointer-events: auto;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 16px 40px -8px rgba(116, 17, 78, 0.28), 0 0 0 1px rgba(116, 17, 78, 0.12);
+  border-left: 5px solid #74114e;
+  overflow: hidden;
+  position: relative;
+  animation: toastSlideIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.onion-order-toast.dismissing {
+  animation: toastSlideOut 0.3s cubic-bezier(0.7, 0, 0.84, 0) forwards;
+}
+
+@keyframes toastSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.92);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes toastSlideOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100px) scale(0.9);
+  }
+}
+
+.onion-toast-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px 8px;
+  background: #faf4f8;
+  border-bottom: 1px solid #f1e2ec;
+}
+
+.onion-toast-tag-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.onion-toast-badge {
+  background: linear-gradient(135deg, #74114e 0%, #46062d 100%);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  letter-spacing: 0.3px;
+}
+
+.onion-toast-badge.test {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+}
+
+.onion-toast-pulse {
+  width: 6px;
+  height: 6px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  box-shadow: 0 0 0 rgba(34, 197, 94, 0.7);
+  animation: toastPulse 1.6s infinite;
+}
+
+@keyframes toastPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(34, 197, 94, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+  }
+}
+
+.onion-toast-order-id {
+  font-size: 12px;
+  font-weight: 700;
+  color: #74114e;
+}
+
+.onion-toast-close {
+  background: transparent;
+  border: none;
+  color: #888;
+  font-size: 16px;
+  line-height: 1;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.onion-toast-close:hover {
+  background: rgba(0, 0, 0, 0.08);
+  color: #111;
+}
+
+.onion-toast-body {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.onion-toast-customer-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.onion-toast-name {
+  font-size: 14.5px;
+  font-weight: 800;
+  color: #1a1a1a;
+}
+
+.onion-toast-amount {
+  font-size: 16px;
+  font-weight: 900;
+  color: #0a6637;
+}
+
+.onion-toast-items {
+  font-size: 13px;
+  color: #4a4a4a;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.onion-toast-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11.5px;
+  color: #777;
+  padding-top: 4px;
+}
+
+.onion-toast-hub {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #f4f0f4;
+  color: #74114e;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.onion-toast-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.onion-toast-btn {
+  flex: 1;
+  padding: 7px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: all 0.15s ease;
+}
+
+.onion-toast-btn.primary {
+  background: #74114e;
+  color: #ffffff;
+}
+
+.onion-toast-btn.primary:hover {
+  background: #5b0c3d;
+}
+
+.onion-toast-btn.secondary {
+  background: #f0fdf4;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+.onion-toast-btn.secondary:hover {
+  background: #dcfce7;
+}
+
+/* Progress bar timer on bottom */
+.onion-toast-progress-bar {
+  height: 3px;
+  background: #f1e2ec;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.onion-toast-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #6db327 0%, #74114e 100%);
+  width: 100%;
+  animation: toastProgress 8s linear forwards;
+}
+
+@keyframes toastProgress {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}

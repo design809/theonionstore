@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "thecodingweb"
+  },
+  "targets": {
+    "thecodingweb": {
+      "hosting": {
+        "theonionstore": [
+          "theonionstore"
+        ]
+      }
+    }
+  }
+}

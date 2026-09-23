@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700;1,800&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+
+/* =========================================
+   HERO SLIDER SECTION
+   ========================================= */
+.greenbee-slider-section {
+  position: relative;
+  width: 100%;
+  height: clamp(440px, 64vh, 600px);
+  min-height: 420px;
+  overflow: hidden;
+  background-color: #1a1016;
+  user-select: none;
+}
+
+.greenbee-slider-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Individual Slide */
+.greenbee-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.04);
+  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+              transform 1.2s cubic-bezier(0.25, 1, 0.5, 1),
+              visibility 0.8s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.greenbee-slide.is-active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  z-index: 2;
+}
+
+/* Subtle Dark Gradient Overlay for Contrast */
+.greenbee-slide-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.5) 100%);
+  pointer-events: none;
+}
+
+/* Content Container */
+.greenbee-slide-content-container {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 900px;
+  padding: 0 24px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.greenbee-slide-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+/* Faint Big Watermark Text in Background */
+.greenbee-watermark-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -64%);
+  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(52px, 10vw, 105px);
+  font-weight: 800;
+  letter-spacing: 8px;
+  color: rgba(255, 255, 255, 0.22);
+  text-transform: uppercase;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 1;
+  user-select: none;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  animation: watermarkFloat 6s ease-in-out infinite alternate;
+}
+
+@keyframes watermarkFloat {
+  0% {
+    transform: translate(-50%, -64%) scale(0.98);
+  }
+  100% {
+    transform: translate(-50%, -60%) scale(1.02);
+  }
+}
+
+/* Main Serif Italic Heading */
+.greenbee-slide-title {
+  position: relative;
+  z-index: 2;
+  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: clamp(28px, 4.2vw, 44px);
+  line-height: 1.25;
+  color: #ffffff;
+  margin: 0 0 14px 0;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6), 0 1px 3px rgba(0, 0, 0, 0.8);
+  letter-spacing: 0.3px;
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Subheading Paragraph */
+.greenbee-slide-desc {
+  position: relative;
+  z-index: 2;
+  font-family: 'Playfair Display', 'Poppins', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(12.5px, 1.5vw, 14.5px);
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.92);
+  max-width: 660px;
+  margin: 0 auto;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  animation: fadeInUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide CTA Button */
+.greenbee-slider-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #74114e;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35), 0 2px 5px rgba(116, 17, 78, 0.5);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.greenbee-slider-cta-btn:hover {
+  background-color: #931964;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45), 0 3px 8px rgba(147, 25, 100, 0.7);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+/* =========================================
+   NAVIGATION ARROWS
+   ========================================= */
+.greenbee-slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.greenbee-slider-section:hover .greenbee-slider-arrow {
+  opacity: 1;
+}
+
+.greenbee-slider-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #74114e;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.greenbee-slider-arrow.prev-arrow {
+  left: 20px;
+}
+
+.greenbee-slider-arrow.next-arrow {
+  right: 20px;
+}
+
+/* =========================================
+   PAGINATION DOTS (Bottom Center)
+   ========================================= */
+.greenbee-slider-dots {
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 10;
+  padding: 6px 12px;
+}
+
+.greenbee-dot-btn {
+  background: transparent;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.greenbee-dot-btn:hover {
+  transform: scale(1.2);
+}
+
+.greenbee-dot-inner {
+  display: block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Active Dot: Hollow Ring with Orange/Gold Accent Border */
+.greenbee-dot-btn.is-active .greenbee-dot-inner {
+  width: 14px;
+  height: 14px;
+  background-color: transparent;
+  border: 2.2px solid #f29314;
+  box-shadow: 0 0 10px rgba(242, 147, 20, 0.6);
+  position: relative;
+}
+
+.greenbee-dot-btn.is-active .greenbee-dot-inner::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #f29314;
+}
+
+/* =========================================
+   RESPONSIVE ADJUSTMENTS
+   ========================================= */
+@media (max-width: 860px) {
+  .greenbee-slider-section {
+    height: 420px;
+  }
+
+  .greenbee-slider-arrow {
+    display: none;
+  }
+
+  .greenbee-watermark-text {
+    letter-spacing: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .greenbee-slider-section {
+    height: 380px;
+    min-height: 360px;
+  }
+
+  .greenbee-slide-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .greenbee-slide-desc {
+    font-size: 11.5px;
+    line-height: 1.5;
+  }
+
+  .greenbee-watermark-text {
+    font-size: 46px;
+    letter-spacing: 2px;
+  }
+}

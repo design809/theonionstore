@@ -1,0 +1,509 @@
+/* ==========================================================================
+   ABOUT US & REGIONAL BRANCHES SECTION - THE ONION STORE
+   ========================================================================== */
+
+.about-section {
+  width: 100%;
+  padding: 70px 0 80px;
+  background: linear-gradient(180deg, #ffffff 0%, #fdf8fb 100%);
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #333333;
+  position: relative;
+  border-top: 1px solid #f0e6ee;
+}
+
+.about-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --------------------------------------------------------------------------
+   Section Header
+   -------------------------------------------------------------------------- */
+.about-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px;
+}
+
+.about-badge {
+  display: inline-block;
+  background-color: rgba(109, 179, 39, 0.12);
+  color: #6db327;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+  border: 1px solid rgba(109, 179, 39, 0.25);
+}
+
+.about-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #1a1a1a;
+  letter-spacing: -0.5px;
+  margin: 0 0 12px 0;
+  line-height: 1.25;
+}
+
+.about-subtitle {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #666666;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Story & Values 2-Column Grid
+   -------------------------------------------------------------------------- */
+.about-story-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 65px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(116, 17, 78, 0.04);
+  border: 1px solid #f2e6ee;
+}
+
+.story-heading {
+  font-size: 22px;
+  font-weight: 800;
+  color: #74114e;
+  margin: 0 0 16px 0;
+  line-height: 1.3;
+}
+
+.story-paragraph {
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: #555555;
+  margin: 0 0 16px 0;
+}
+
+.story-paragraph strong {
+  color: #222222;
+}
+
+/* Metrics / Stats Row */
+.about-metrics-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px dashed #e8d7e2;
+}
+
+.metric-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-number {
+  font-size: 22px;
+  font-weight: 800;
+  color: #74114e;
+  line-height: 1.2;
+}
+
+.metric-label {
+  font-size: 11px;
+  color: #777777;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+/* Values Column */
+.about-values-col {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.value-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background-color: #fdf8fb;
+  border: 1px solid #f2e2ec;
+  border-radius: 12px;
+  padding: 16px 18px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(116, 17, 78, 0.08);
+}
+
+.value-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #74114e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #ebd4e3;
+  box-shadow: 0 2px 6px rgba(116, 17, 78, 0.06);
+}
+
+.value-text h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 4px 0;
+}
+
+.value-text p {
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #666666;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Branches Showcase Section
+   -------------------------------------------------------------------------- */
+.branches-showcase-wrap {
+  width: 100%;
+}
+
+.branches-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.branches-title-group {
+  max-width: 600px;
+}
+
+.branches-tag {
+  font-size: 11px;
+  font-weight: 800;
+  color: #6db327;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.branches-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0 0 8px 0;
+}
+
+.branches-desc {
+  font-size: 13px;
+  color: #666666;
+  margin: 0;
+  line-height: 1.55;
+}
+
+/* Filter Tabs */
+.branch-filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tab-btn {
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #dcdcdc;
+  background-color: #ffffff;
+  color: #555555;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.tab-btn:hover {
+  border-color: #74114e;
+  color: #74114e;
+}
+
+.tab-btn.active {
+  background-color: #74114e;
+  border-color: #74114e;
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(116, 17, 78, 0.25);
+}
+
+/* 4 Branches Grid */
+.branches-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Branch Card */
+.branch-card {
+  background-color: #ffffff;
+  border: 1px solid #ebd9e5;
+  border-radius: 14px;
+  padding: 22px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.branch-card:hover {
+  transform: translateY(-4px);
+  border-color: #c984ad;
+  box-shadow: 0 10px 25px rgba(116, 17, 78, 0.1);
+}
+
+.branch-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f4e9f0;
+}
+
+.branch-city-name {
+  font-size: 16px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0 0 4px 0;
+  line-height: 1.3;
+}
+
+.branch-type-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  color: #6db327;
+  background-color: rgba(109, 179, 39, 0.1);
+  padding: 2px 8px;
+  border-radius: 10px;
+  letter-spacing: 0.2px;
+}
+
+.branch-city-pin {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #fcf4f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Info Blocks */
+.branch-info-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 12.5px;
+}
+
+.info-icon {
+  width: 22px;
+  height: 22px;
+  color: #74114e;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.info-text {
+  flex: 1;
+}
+
+.info-label {
+  display: block;
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #888888;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  margin-bottom: 2px;
+}
+
+.info-val {
+  font-size: 12px;
+  line-height: 1.45;
+  color: #333333;
+  margin: 0;
+}
+
+.phone-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+}
+
+.phone-sep {
+  color: #ccc;
+  font-size: 10px;
+}
+
+.contact-link {
+  color: #74114e;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  transition: color 0.15s ease;
+}
+
+.contact-link:hover {
+  color: #6db327;
+  text-decoration: underline;
+}
+
+/* Coverage Tag */
+.branch-coverage-tag {
+  background-color: #fdf8fb;
+  border: 1px dashed #ebd4e3;
+  border-radius: 8px;
+  padding: 8px 10px;
+  margin: 6px 0 16px;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.coverage-title {
+  display: block;
+  font-weight: 700;
+  color: #74114e;
+  margin-bottom: 2px;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.coverage-text {
+  color: #666666;
+}
+
+/* Action Buttons */
+.branch-action-row {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.branch-call-btn {
+  flex: 1;
+  height: 36px;
+  border-radius: 20px;
+  background-color: #74114e;
+  color: #ffffff;
+  font-size: 11.5px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(116, 17, 78, 0.2);
+}
+
+.branch-call-btn:hover {
+  background-color: #5c0d3e;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(116, 17, 78, 0.3);
+}
+
+.branch-email-btn {
+  flex: 1;
+  height: 36px;
+  border-radius: 20px;
+  background-color: #f6f0f4;
+  color: #555555;
+  border: 1px solid #ebd4e3;
+  font-size: 11.5px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.branch-email-btn:hover {
+  background-color: #74114e;
+  border-color: #74114e;
+  color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .branches-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 900px) {
+  .about-story-grid {
+    grid-template-columns: 1fr;
+    padding: 24px;
+    gap: 30px;
+  }
+
+  .about-metrics-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 650px) {
+  .about-section {
+    padding: 50px 0 60px;
+  }
+
+  .about-title {
+    font-size: 24px;
+  }
+
+  .about-subtitle {
+    font-size: 13px;
+  }
+
+  .branches-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .branches-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .branch-action-row {
+    flex-direction: column;
+  }
+
+  .branch-call-btn,
+  .branch-email-btn {
+    width: 100%;
+  }
+}

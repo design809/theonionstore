@@ -1,0 +1,116 @@
+/* ==========================================================================
+   HOME VIEW HIGHLIGHTS SECTION
+   ========================================================================== */
+
+.home-highlights-section {
+  padding: 60px 0 75px;
+  background: linear-gradient(180deg, #ffffff 0%, #fdf6fa 100%);
+  border-top: 1px solid #f0e2ec;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.home-highlights-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.highlight-banner-head {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.highlight-badge {
+  display: inline-block;
+  background-color: rgba(109, 179, 39, 0.12);
+  color: #6db327;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+  border: 1px solid rgba(109, 179, 39, 0.25);
+}
+
+.highlight-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0 0 8px 0;
+  letter-spacing: -0.4px;
+}
+
+.highlight-sub {
+  font-size: 14px;
+  color: #666666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.home-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.home-hl-card {
+  background: #ffffff;
+  border: 1px solid #ebd9e5;
+  border-radius: 14px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 14px rgba(116, 17, 78, 0.04);
+  transition: all 0.25s ease;
+}
+
+.home-hl-card:hover {
+  border-color: #74114e;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(116, 17, 78, 0.1);
+}
+
+.hl-icon {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.home-hl-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 8px 0;
+}
+
+.home-hl-card p {
+  font-size: 12.5px;
+  color: #666666;
+  line-height: 1.55;
+  margin: 0 0 16px 0;
+  flex: 1;
+}
+
+.hl-link-btn {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #74114e;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  margin-top: auto;
+}
+
+.hl-link-btn:hover {
+  color: #6db327;
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  .highlight-title {
+    font-size: 22px;
+  }
+}
