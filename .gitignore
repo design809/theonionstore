@@ -11,6 +11,8 @@ node_modules
 dist
 dist-ssr
 *.local
+build-apk-output
+*.apk
 
 # Editor directories and files
 .vscode/*
